@@ -16,8 +16,8 @@ const navlinks: Navlink[] = [
 const Navbar = () => {
   return (
     <header className="p-4 lg:px-8 lg:py-4 fixed z-50 w-full max-w-screen-xl mx-auto container backdrop-blur-xl ">
-      <nav className="flex w-full  top-0  justify-between">
-        <h1 className="text-3xl font-bold  text-gray-800 font-display ">KLASS 5k</h1>
+      <nav className="flex w-full  top-0 items-center  justify-between">
+        <h1 className="text-3xl font-bold  text-gray-800 font-display border-2 py-1 px-3 border-yellow-600">KLASS 5k</h1>
         <div className="gap-5 hidden">
           {navlinks.map((item) => (
             <a href={item.href} key={item.href}>

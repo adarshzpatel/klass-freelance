@@ -16,8 +16,8 @@ export default function Home() {
       <Navbar/>
       {/* Hero Section  */}
       <section className="flex flex-col lg:p-8 p-4 lg:flex-row min-h-screen items-center justify-around">
-        <div className="lg:w-1/2 w-full">
-          <h1 className="text-6xl font-display font-bold mb-4 text-gray-800">The Klass Project</h1>
+        <div className=" mt-24 lg:mt-0 lg:w-1/2 w-full">
+          <h1 className="text-4xl md:text-6xl font-display font-bold mb-4 text-gray-800">The Klass Project</h1>
           <p className="text-xl text-gray-600 mb-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, reiciendis sit! Quis veritatis facilis ipsam pariatur quia </p>
           
           <button className="relative px-4 font-medium  hover:shadow-xl active:shadow-lg bg-yellow-400  rounded-xl hover:bg-yello-300 active:bg-yellow-500 py-2 transition duration-300 ease-out">Go to mint</button>
