@@ -6,6 +6,8 @@ import Image from 'next/image'
 import Tilt from 'react-parallax-tilt'
 import TeamSection from '../components/TeamSection';
 import HeroSection from '../components/HeroSection';
+import RoadmapSection from '../components/RoadmapSection';
+import FooterSection from '../components/FooterSection';
 
 
 
@@ -21,17 +23,13 @@ export default function Home() {
 
       </section>
       {/* Team */}
-      <section id="team">
         <TeamSection/>
-      </section>
       {/* Roadmap */}
-      <section id="roadmap"></section>
+      <RoadmapSection/>
       {/* About */}
       <section id="about"></section>
       {/* Footer */}
-      <footer id="footer">
-
-      </footer>
+      <FooterSection/>
     </div>
   )
 }
