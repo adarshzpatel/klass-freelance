@@ -8,6 +8,12 @@
     @apply scroll-smooth;
   }
   body{
-    @apply font-body bg-yellow-50;
+    @apply font-body bg-purple-50 ;
   }
+  button{
+    @apply px-4 font-medium hover:shadow-xl active:shadow-lg rounded-xl py-2 transition duration-300 ease-out;
+    @apply bg-gradient-to-r from-purple-500 to-pink-400 text-white;
+    @apply -hue-rotate-30 hover:hue-rotate-0 active:hue-rotate-30;
+  }
+
 }
