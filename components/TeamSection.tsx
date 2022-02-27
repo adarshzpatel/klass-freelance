@@ -34,7 +34,7 @@ const MemberCard = ({member}) => (
 
 const TeamSection = () => {
   return (
-    <section className=' my-16'>
+    <section id='team' className=' my-16'>
       <Container>
       <h1 className='text-4xl text-gray-900 font-bold font-display mb-16 text-center'>Team behind the project</h1>
       <div className='flex flex-wrap gap-8 justify-around items-center'>
