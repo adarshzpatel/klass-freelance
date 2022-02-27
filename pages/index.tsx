@@ -20,12 +20,11 @@ export default function Home() {
       {/* Countdown */}
       {/* Gallery */}
       <section id='#gallery'>
-
       </section>
-      {/* Team */}
-        <TeamSection/>
       {/* Roadmap */}
       <RoadmapSection/>
+      {/* Team */}
+        <TeamSection/>
       {/* About */}
       <section id="about"></section>
       {/* Footer */}
