@@ -14,7 +14,7 @@ const RoadmapSection = (props: Props) => {
         <div className="flex justify-around p-4 lg:p-8 ">
           <div className="lg:flex hidden items-center p-8">
             <div className="relative rotate-6">
-          <Image className="rounded-2xl" src='/image4.jpg' alt='image' height={250} width={250}/>
+          <Image className="rounded-2xl" src='/4.jpg' alt='image' height={250} width={250}/>
             </div>
           </div>
 
@@ -60,7 +60,7 @@ const RoadmapSection = (props: Props) => {
           </div>
           <div className="lg:flex hidden items-center p-8">
             <div className="relative  -rotate-12">
-          <Image className="rounded-2xl  " src='/image3.jpg' alt='image' height={250} width={250}/>
+          <Image className="rounded-2xl  " src='/3.jpg' alt='image' height={250} width={250}/>
           </div>
           </div>
 
