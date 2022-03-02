@@ -7,8 +7,8 @@
   html{
     @apply scroll-smooth;
   }
-  body{
-    @apply font-body bg-purple-50 ;
+  body{;
+    @apply font-body bg-gradient-to-br from-purple-50 to-violet-50;
   }
   button{
     @apply px-4 font-medium hover:shadow-xl active:shadow-lg rounded-xl py-2 transition duration-300 ease-out;

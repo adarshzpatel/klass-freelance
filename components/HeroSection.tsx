@@ -24,18 +24,18 @@ const HeroSection = () => {
     <div className={styles.heroImageContainer}>
       <div className='flex flex-col gap-3 relative top-8'>
         <Tilt glareEnable={true}>
-          <Image className={styles.heroImage} src='/image1.jpg' alt='image' width={260} height={260} />
+          <Image className={styles.heroImage} src='/1.jpg' alt='image' width={260} height={260} />
         </Tilt>
         <Tilt glareEnable={true}>
-          <Image className={styles.heroImage} src='/image2.jpg' alt='image' width={260} height={260} />
+          <Image className={styles.heroImage} src='/2.jpg' alt='image' width={260} height={260} />
         </Tilt>
       </div>
       <div className='flex flex-col gap-3'>
         <Tilt glareEnable={true}>
-          <Image className={styles.heroImage} src='/image3.jpg' alt='image' width={260} height={260} />
+          <Image className={styles.heroImage} src='/3.jpg' alt='image' width={260} height={260} />
         </Tilt>
         <Tilt glareEnable={true}>
-          <Image className={styles.heroImage} src='/image4.jpg' alt='image' width={260} height={260} />
+          <Image className={styles.heroImage} src='/4.jpg' alt='image' width={260} height={260} />
         </Tilt>
       </div>
     </div>

@@ -1,13 +1,12 @@
 
 import Countdown from '../components/PresaleCountdown';
 import Navbar from '../components/Navbar';
-import PresaleCountdown from '../components/PresaleCountdown';
-import Image from 'next/image'
-import Tilt from 'react-parallax-tilt'
+
 import TeamSection from '../components/TeamSection';
 import HeroSection from '../components/HeroSection';
 import RoadmapSection from '../components/RoadmapSection';
 import FooterSection from '../components/FooterSection';
+import GallerySection from '../components/GallerySection';
 
 
 
@@ -18,11 +17,10 @@ export default function Home() {
       {/* Hero Section  */}
       <HeroSection/>
       {/* Countdown */}
-      {/* Gallery */}
-      <section id='#gallery'>
-      </section>
       {/* Roadmap */}
       <RoadmapSection/>
+      {/* Gallery */}
+      <GallerySection />
       {/* Team */}
         <TeamSection/>
       {/* About */}
