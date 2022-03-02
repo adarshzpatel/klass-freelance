@@ -28,16 +28,16 @@ const FooterSection = () => {
           ))}
         </div>
         <div className='flex flex-col gap-2  text-slate-700'>
-            <a className='hover:text-cyan-500 hover:font-medium' target="_blank" rel="norefferer" href={OPENSEA_URL}>
+            <a className='hover:text-cyan-500 hover:font-medium' target="_blank" rel="noreferrer" href={OPENSEA_URL}>
               Opensea
             </a>
-            <a className='hover:text-blue-500 hover:font-medium' target="_blank" rel="norefferer" href={TWIITER_URL}>
+            <a className='hover:text-blue-500 hover:font-medium' target="_blank" rel="noreferrer" href={TWIITER_URL}>
               Twitter
             </a>
-            <a className='hover:text-purple-500 hover:font-medium' target="_blank" rel="norefferer" href={DISCORD_URL}>
+            <a className='hover:text-purple-500 hover:font-medium' target="_blank" rel="noreferrer" href={DISCORD_URL}>
               Discord
             </a>
-            <a className='hover:text-pink-500 hover:font-medium' target="_blank" rel="norefferer" href={INSTAGRAM_URL}>
+            <a className='hover:text-pink-500 hover:font-medium' target="_blank" rel="noreferrer" href={INSTAGRAM_URL}>
               Instagram
             </a>
         </div>
