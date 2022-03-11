@@ -48,6 +48,14 @@ const Mint = () => {
       console.error(err);
     }
   }
+  const getMintCost = async(contract):Promise<void> => {
+    try{
+      const _cost = await contract.maxSupply();
+      setState({...state,cost:_cost.toNumber()});
+    } catch(err) {
+      console.error(err);
+    }
+  }
   const getBalanceOfUser = async(contract):Promise<void> => {
     try{
       const _balanceOf = await contract.balanceOf(currentAccount);
@@ -126,6 +134,16 @@ const Mint = () => {
     }
   }
 
+  const fetchContractData = () => {
+    const {ethereum}:any = window;
+    const provider = new ethers.providers.Web3Provider(ethereum);
+    const signer = provider.getSigner()
+    const contract = new ethers.Contract(CONTRACT_ADDRESS,ABI,signer);
+    getTotalSupply(contract);
+    getMaxSupply(contract);
+    getBalanceOfUser(contract);
+    getMintCost(contract);
+  }
   const switchNetwork = async () => {
     const {ethereum}:any = window
     if (ethereum) {
