@@ -21,12 +21,12 @@ const MemberCard = ({member}) => (
 
       ):
       (
-        <div className='h-36 w-36 bg-gray-300 rounded-full'>
+        <div className='h-24 w-24 bg-gray-300 rounded-full'>
 
         </div>
       )}
-      <h6 className='text-2xl text-gray-800 font-display font-bold mt-4'>{member.name}</h6>
-      <p className='text-lg text-gray-600 font-medium'>{member.role}</p>
+      <h6 className='text-2xl font-display font-m mt-4'>{member.name}</h6>
+      <p className=''>{member.role}</p>
 
     </div>
   )
@@ -36,7 +36,7 @@ const TeamSection = () => {
   return (
     <section id='team' className=' my-16'>
       <Container>
-      <h1 className='text-4xl text-gray-900 font-bold font-display mb-16 text-center'>Team behind the project</h1>
+      <h1 className='text-4xl  font-bold font-display mb-16 text-center'>Team behind the project</h1>
       <div className='flex flex-wrap gap-8 justify-around items-center'>
         {memberList.map((item) => (
           <MemberCard member={item} key={item.name}/>

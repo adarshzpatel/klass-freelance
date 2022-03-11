@@ -1,8 +1,13 @@
-import { AppProps } from 'next/app'
-import '../styles/globals.css'
+import { AppProps } from "next/app";
+import "../styles/globals.css";
+import { providers } from "ethers";
 
-function MyApp({ Component, pageProps }:AppProps) {
-  return <Component {...pageProps} />
+const provider = providers.getDefaultProvider();
+
+function MyApp({ Component, pageProps }: AppProps) {
+  return (
+      <Component {...pageProps} />
+  );
 }
 
-export default MyApp
+export default MyApp;

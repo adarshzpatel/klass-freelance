@@ -10,7 +10,7 @@ const RoadmapSection = (props: Props) => {
   return (
     <section id='roadmap'>
       <Container>
-          <h1 className="text-4xl font-bold font-display text-gray-800">Roadmap</h1>
+          <h1 className="text-4xl font-bold font-display">Roadmap</h1>
         <div className="flex justify-around p-4 lg:p-8 ">
           <div className="lg:flex hidden items-center p-8">
             <div className="relative rotate-6">

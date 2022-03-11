@@ -8,7 +8,9 @@
     @apply scroll-smooth;
   }
   body{;
-    @apply font-body bg-gradient-to-br from-purple-50 to-violet-50;
+    @apply font-body text-gray-100;
+    background: url("/bg.png");
+    @apply bg-cover bg-center;
   }
   button{
     @apply px-4 font-medium hover:shadow-xl active:shadow-lg rounded-xl py-2 transition duration-300 ease-out;
