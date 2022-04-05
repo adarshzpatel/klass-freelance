@@ -1,5 +1,6 @@
 import React from 'react'
-import Container from './Container';
+import Container from '../Container';
+import Heading from '../Heading';
 
 type Member = {
   name: string,
@@ -35,14 +36,7 @@ const MemberCard = ({member}) => (
 const TeamSection = () => {
   return (
     <section id='team' className=' my-16'>
-      <Container>
-      <h1 className='text-4xl  font-bold font-display mb-16 text-center'>Team behind the project</h1>
-      <div className='flex flex-wrap gap-8 justify-around items-center'>
-        {memberList.map((item) => (
-          <MemberCard member={item} key={item.name}/>
-  ))}
-      </div>
-      </Container>
+        <Heading text='Meet the team'/>
     </section>
   )
 };

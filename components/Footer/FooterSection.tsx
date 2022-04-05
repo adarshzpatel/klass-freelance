@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
-import Container from './Container'
-import { navlinks } from './Navbar'
+import Container from '../Container'
+import { navlinks } from '../Navbar/Navbar'
 
 
 const OPENSEA_URL = ""

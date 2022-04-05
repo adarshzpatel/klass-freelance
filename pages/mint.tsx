@@ -3,7 +3,7 @@ import { ethers } from "ethers";
 import React from "react";
 
 
-import MintCounter from "../components/MintCounter";
+import MintCounter from "../components/Mint/MintCounter";
 import { ABI, CONTRACT_ADDRESS } from "../contract";
 
 

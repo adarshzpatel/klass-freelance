@@ -1,32 +1,24 @@
+import Countdown from "../components/PresaleCountdown";
+import Navbar from "../components/Navbar/Navbar";
 
-import Countdown from '../components/PresaleCountdown';
-import Navbar from '../components/Navbar';
-
-import TeamSection from '../components/TeamSection';
-import HeroSection from '../components/HeroSection';
-import RoadmapSection from '../components/RoadmapSection';
-import FooterSection from '../components/FooterSection';
-import GallerySection from '../components/GallerySection';
-
-
+import TeamSection from "../components/Team/TeamSection";
+import HeroSection from "../components/Hero/HeroSection";
+import RoadmapSection from "../components/Roadmap/RoadmapSection";
+import FooterSection from "../components/Footer/FooterSection";
+import GallerySection from "../components/Gallery/GallerySection";
+import Container from "../components/Container";
 
 export default function Home() {
   return (
     <div>
-      <Navbar/>
-      {/* Hero Section  */}
-      <HeroSection/>
-      {/* Countdown */}
-      {/* Roadmap */}
-      <RoadmapSection/>
-      {/* Gallery */}
-      <GallerySection />
-      {/* Team */}
-        <TeamSection/>
-      {/* About */}
-      <section id="about"></section>
-      {/* Footer */}
-      <FooterSection/>
+      <Navbar />
+      <Container>
+        <HeroSection />
+        <RoadmapSection />
+        <GallerySection />
+        <TeamSection />
+      </Container>
+      <FooterSection />
     </div>
-  )
+  );
 }
