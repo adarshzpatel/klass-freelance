@@ -1,5 +1,7 @@
+import { ChevronDoubleRightIcon } from '@heroicons/react/outline'
 import React from 'react'
 import Typewriter from "typewriter-effect"
+import CtaBtn from './CtaBtn'
 type Props = {}
 
 const HeroTitle = (props: Props) => {
@@ -29,6 +31,12 @@ const HeroTitle = (props: Props) => {
           }}
         />
       </h1>
+    </div>
+    <div className='mt-12'>
+    <CtaBtn link='./mint'>
+        Go to mint page
+        <ChevronDoubleRightIcon className='h-8 w-8 relative '/>
+    </CtaBtn>
     </div>
   </div>
   )

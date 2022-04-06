@@ -1,9 +1,9 @@
 import React from "react";
-import {Navigation,Pagination,Scrollbar,Autoplay} from "swiper"
-import { Swiper, SwiperSlide } from "swiper/react";
+import {Navigation,Autoplay,Pagination} from "swiper"
+import { Swiper, SwiperSlide, } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
+import "swiper/css/pagination"
 import "swiper/css/scrollbar"
 import "swiper/css/effect-cards";
 import { EffectCards } from "swiper";
@@ -13,31 +13,32 @@ import { ArrowNarrowLeftIcon, ArrowNarrowRightIcon } from "@heroicons/react/outl
 type Props = {};
 
 const Carousel = (props: Props) => {
+  const array = new Array(40).fill(-1);
   return (
     <Swiper
-      className="h-80 w-80 select-none  text-black font-bold font-itim  relative"
-      modules={[Navigation,Pagination,Scrollbar,Autoplay,EffectCards]}
+      className=" w-80 h-[370px]  select-none text-gray-900  font-bold   relative"
+      modules={[Navigation,Autoplay,Pagination,EffectCards]}
       autoplay={{
-        delay: 2000,
-        pauseOnMouseEnter:true,
+        delay: 1000,
         disableOnInteraction: false,
       }}
-      navigation
-      // navigation={{nextEl:'#right-nav',prevEl:'#left-nav',lockClass:'hidden',hiddenClass:'hidden',disabledClass:'.no-nav'}}
-      pagination={{clickable:true,type:"fraction",dynamicBullets:true}}
+      pagination={{type:'fraction'}}
+      navigation={{nextEl:'#right-nav',prevEl:'#left-nav',lockClass:'hidden',hiddenClass:'hidden',disabledClass:'.no-nav'}}
       effect={"cards"}
       grabCursor={true}
     >
-      {[1, 2, 3, 4, 5, 6, 7].map((item) => (
-        <SwiperSlide className="flex shadow-xl  rounded-xl ring-1  ring-white items-center justify-center" key={item}>
-          <Image className="rounded-xl w-full h-full block object-cover" src={`/${item}.jpg`} alt="" width={400} height={400} />
+      {array.map((item,index) => (
+        <SwiperSlide className="flex  rounded-xl ring-1 ring-stone-800 bg-stone-100 text-slate-700   items-start p-2" key={item}>
+          <div className="relative  ring-1 ring-opacity-75 ring-stone-900 rounded-xl overflow-hidden h-80 w-80">
+          <Image className="w-full h-full block  " src={`/${index+1}.jpg`} alt="" layout="fill" />
+          </div>
         </SwiperSlide>
       ))}
-      {/* <ArrowNarrowRightIcon id="right-nav" className="text-white absolute -right-20 z-10 hover:scale-110 hover:translate-x-2 top-[48%] duration-200 h-8 w-8 cursor-pointer " /> */}
-      {/* <ArrowNarrowLeftIcon id="left-nav" className="absolute text-white my-auto -left-20 top-[48%] hover:scale-110 hover:-translate-x-2 duration-200 z-10 h-8 w-8 cursor-pointer " /> */}
-        {/* <div className="no-nav"></div> */}
+      <ArrowNarrowRightIcon id="right-nav" className="text-white absolute -right-20 z-10 hover:scale-110 hover:translate-x-2 top-[48%] duration-200 h-8 w-8 cursor-pointer " />
+      <ArrowNarrowLeftIcon id="left-nav" className="absolute text-white my-auto -left-20 top-[48%] hover:scale-110 hover:-translate-x-2 duration-200 z-10 h-8 w-8 cursor-pointer " />
+ 
     </Swiper>
-  );
+  )
 };
 
 export default Carousel;
