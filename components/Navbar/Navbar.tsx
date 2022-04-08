@@ -35,7 +35,7 @@ const Navbar = () => {
         </div>
         <Logo />
         <div className="flex gap-4 text-slate-300">
-         <SocialLink Icon={DiscordIcon} link={"#"} text="Discord"/>
+         <SocialLink Icon={DiscordIcon} link={""} text="Discord"/>
          /
          <SocialLink Icon={OpenSeaIcon} link={"#"} text="OpenSea"/>
          /

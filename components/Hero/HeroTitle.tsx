@@ -33,8 +33,8 @@ const HeroTitle = (props: Props) => {
       </h1>
     </div>
     <div className='mt-12'>
-    <CtaBtn link='./mint'>
-        Go to mint page
+    <CtaBtn link='https://discord.com/invite/v5CWUfjxHk'>
+        Join Discord
         <ChevronDoubleRightIcon className='h-8 w-8 relative '/>
     </CtaBtn>
     </div>

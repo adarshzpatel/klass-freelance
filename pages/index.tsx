@@ -7,6 +7,7 @@ import RoadmapSection from "../components/Roadmap/RoadmapSection";
 import FooterSection from "../components/Footer/FooterSection";
 import GallerySection from "../components/Gallery/GallerySection";
 import Container from "../components/Container";
+import PresaleCountdown from "../components/PresaleCountdown";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Navbar />
       <Container>
         <HeroSection />
+        <PresaleCountdown/>
         <RoadmapSection />
         <GallerySection />
         <TeamSection />

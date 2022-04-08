@@ -1,44 +1,31 @@
-import React from 'react'
-import Container from '../Container';
-import Heading from '../Heading';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import Container from "../Container";
+import Heading from "../Heading";
+import ProfileCard from "./ProfileCard";
 
 type Member = {
-  name: string,
-  role: string,
-  twitter: string,
-  image:string
-}
-
-const memberList:Member[] = [
-  {name:'Name1',role:'Founder',twitter:'username',image:''},
-  {name:'Name2',role:'Developer',twitter:'username',image:''},
-  {name:'Name3',role:'Marketing',twitter:'username',image:''},
-]
-
-const MemberCard = ({member}) => (
-    <div className='p-8 text-center'>
-      {member.image ? (
-        <img src={member.image} alt={member.name} />
-
-      ):
-      (
-        <div className='h-24 w-24 bg-gray-300 rounded-full'>
-
-        </div>
-      )}
-      <h6 className='text-2xl font-display font-m mt-4'>{member.name}</h6>
-      <p className=''>{member.role}</p>
-
-    </div>
-  )
-
+  name: string;
+  role: string;
+  twitter: string;
+  image: string;
+};
 
 const TeamSection = () => {
   return (
-    <section id='team' className=' my-16'>
-        <Heading text='Meet the team'/>
+    <section id="team" className="my-16">
+      <Heading text="Meet the team" />
+      <div className="flex gap-4 mt-16 flex-wrap justify-center">
+      <ProfileCard name="Kaycee" pfp="/1.jpg" role="Founder" />
+      <ProfileCard name="Maxi" pfp="/23.jpg" role="Co-founder" />
+      <ProfileCard name="Remi" pfp="/26.jpg" role="Co-Founder / Artist" />
+      <ProfileCard name="Adarsh" pfp="/33.jpg" role="Co-Founder / Engineer" />
+      <ProfileCard name="Chinu" pfp="/1.jpg" role="Project Manager" />
+      <ProfileCard name="Ranza" pfp="/26.jpg" role="Head Mod" />
+      <ProfileCard name="Vivian" pfp="/33.jpg" role="Collab Manager" />
+      </div>
     </section>
-  )
+  );
 };
 
 export default TeamSection;
