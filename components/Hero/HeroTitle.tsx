@@ -34,8 +34,8 @@ const HeroTitle = (props: Props) => {
     </div>
     <div className='mt-12'>
     <CtaBtn link='https://discord.com/invite/v5CWUfjxHk'>
-        Join Discord
-        <ChevronDoubleRightIcon className='h-8 w-8 relative '/>
+       <p className='z-[1]'>  Join Discord </p>
+        <ChevronDoubleRightIcon  className='h-8 w-8 relative '/>
     </CtaBtn>
     </div>
   </div>

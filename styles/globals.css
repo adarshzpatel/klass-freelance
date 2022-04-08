@@ -7,14 +7,18 @@
     @apply scroll-smooth;
   }
   body{;
-    @apply font-body text-gray-100 bg-slate-900;
-    /* background: url("/bg.png"); */
+    @apply font-body text-gray-100 bg-gray-900;
     @apply bg-cover bg-center;
   }
   button{
     @apply px-4 font-medium hover:shadow-xl active:shadow-lg rounded-xl py-2 transition duration-300 ease-out;
     @apply bg-gradient-to-r from-purple-500 to-pink-400 text-white;
     @apply -hue-rotate-30 hover:hue-rotate-0 active:hue-rotate-30;
+  }
+  
+  #hero{
+    background: url("/bg.png");
+    @apply bg-cover;
   }
 
   .text-gradient {
