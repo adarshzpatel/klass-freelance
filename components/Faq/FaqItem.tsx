@@ -1,18 +1,21 @@
 import React from "react";
 import { Disclosure,Transition } from "@headlessui/react";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/outline";
-type Props = {};
+type Props = {
+  q:string
+  a:String
+};
 
-const FaqItem = (props: Props) => {
+const FaqItem = ({q,a}: Props) => {
   return (
     <Disclosure>
       {({ open }) => (
         <>
           <Disclosure.Button
             as="div"
-            className="flex mb-1 cursor-pointer justify-between items-center bg-slate-800 p-3 rounded-xl px-4"
+            className="flex hover:bg-slate-700 duration-300 mb-1 cursor-pointer justify-between items-center bg-slate-800 p-3 rounded-xl px-4"
           >
-            Q . Question
+            {q}
            {open ? <ChevronUpIcon className="h-6 w-6" /> : <ChevronDownIcon className="h-6 w-6" />}
           </Disclosure.Button>
           
@@ -26,7 +29,7 @@ const FaqItem = (props: Props) => {
       >
 
           <Disclosure.Panel className=" mb-2 px-4 py-2 rounded-xl">
-              Ans : Hello
+              {a}
           </Disclosure.Panel>
       </Transition>
         </>

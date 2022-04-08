@@ -2,6 +2,7 @@ import React from 'react'
 import Countdown, { zeroPad } from 'react-countdown'
 import Heading from './Heading'
 import Image from "next/image"
+import Container from './Container'
 type Props = {}
 
 const renderer = ({days,hours,minutes,seconds,completed}) => {
@@ -20,15 +21,18 @@ const renderer = ({days,hours,minutes,seconds,completed}) => {
 
 const PresaleCountdown = (props: Props) => {
   return (
-    <section className='min-h-screen mt-16 flex flex-col'>
+    <section className='min-h-screen bg-slate-80 mt-16 flex flex-col'>
+      <Container>
+
       <div className='h-full flex mt-20 flex-col md:flex-row justify-around items-center gap-8 '>
       <Image src="/18.jpg" className='rounded-xl' alt="counter-image" height={400} width={400} /> 
       <div className='relative'>
         <h6 className='text-3xl font-display z-[1] brightness-125 bg-gradient-to-r  from-orange-500 max-w-fit bg-clip-text text-transparent to to-pink-600 leading-loose'>Presale begins in</h6>
         <h6 className='text-3xl absolute top-0 blur-lg font-display bg-gradient-to-r from-orange-500 max-w-fit bg-clip-text text-transparent to to-pink-600 leading-loose'>Presale begins in</h6>
-      <Countdown date={new Date("2022-05-07")} renderer={renderer} />
+      <Countdown date={new Date("2022-05-04")} renderer={renderer} />
       </div>
       </div>
+      </Container>
     </section>
   )
 }

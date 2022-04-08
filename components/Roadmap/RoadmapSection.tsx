@@ -11,7 +11,7 @@ const RoadmapSection = () => {
       <Container>
 
       <Heading text="Roadmap" />
-      <div>
+      <div className="pt-16">
         <TimelineItem
           text="1. Discord opens at 1k verified members."
           completed={true}

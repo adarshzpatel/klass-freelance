@@ -14,6 +14,8 @@ type Member = {
 const TeamSection = () => {
   return (
     <section id="team" className="my-16">
+      <Container>
+
       <Heading text="Meet the team" />
       <div className="flex gap-4 mt-16 flex-wrap justify-center">
       <ProfileCard name="Kaycee" pfp="/1.jpg" role="Founder" />
@@ -24,6 +26,7 @@ const TeamSection = () => {
       <ProfileCard name="Ranza" pfp="/26.jpg" role="Head Mod" />
       <ProfileCard name="Vivian" pfp="/33.jpg" role="Collab Manager" />
       </div>
+      </Container>
     </section>
   );
 };

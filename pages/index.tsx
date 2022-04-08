@@ -11,8 +11,10 @@ export default function Home() {
   return (
     <div>
       <Navbar />
+      <div id="bg">
         <HeroSection />
         <PresaleCountdown/>
+      </ div>
         <RoadmapSection />
         <GallerySection />
         <TeamSection />
