@@ -6,6 +6,7 @@ import FooterSection from "../components/Footer/FooterSection";
 import GallerySection from "../components/Gallery/GallerySection";
 import PresaleCountdown from "../components/PresaleCountdown";
 import FaqSection from "../components/Faq/FaqSection";
+import AboutSection from "../components/About/AboutSection";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <GallerySection />
         <TeamSection />
         <FaqSection/>
+        <AboutSection/>
       <FooterSection />
     </div>
   );

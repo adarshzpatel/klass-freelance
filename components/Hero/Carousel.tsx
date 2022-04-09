@@ -1,43 +1,39 @@
 import React from "react";
-import {Navigation,Autoplay,Pagination} from "swiper"
+import {Autoplay,EffectFade} from "swiper"
 import { Swiper, SwiperSlide, } from "swiper/react";
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination"
 import "swiper/css/scrollbar"
-import "swiper/css/effect-cards";
-import { EffectCards } from "swiper";
+import "swiper/css/effect-fade"; 
 import Image from "next/image";
-import { ArrowNarrowLeftIcon, ArrowNarrowRightIcon } from "@heroicons/react/outline";
 
 type Props = {};
 
 const Carousel = (props: Props) => {
-  const array = new Array(40).fill(-1);
+  const array = new Array(10).fill(-1);
   return (
+    <div>
+
     <Swiper
-      className=" w-80 h-[370px]  select-none text-gray-900  font-bold   relative"
-      modules={[Navigation,Autoplay,Pagination,EffectCards]}
+      className=" w-64 md:w-96 h-64 md:h-96 select-none text-gray-900  font-bold   relative"
+      modules={[Autoplay,EffectFade]}
       autoplay={{
         delay: 1000,
         disableOnInteraction: false,
       }}
-      pagination={{type:'fraction'}}
-      navigation={{nextEl:'#right-nav',prevEl:'#left-nav',lockClass:'hidden',hiddenClass:'hidden',disabledClass:'.no-nav'}}
-      effect={"cards"}
+      effect='fade'
       grabCursor={true}
-    >
+      >
       {array.map((item,index) => (
-        <SwiperSlide className="flex  rounded-xl ring-1 ring-stone-800 bg-stone-100 text-slate-700   items-start p-2" key={item}>
-          <div className="relative  ring-1 ring-opacity-75 ring-stone-900 rounded-xl overflow-hidden h-80 w-80">
+        <SwiperSlide className="flex  rounded-xl ring-1 ring-stone-800 bg-stone-100 text-slate-700   items-start " key={item}>
+          <div className="relative  ring-1 ring-opacity-75 ring-stone-900 rounded-xl overflow-hidden h-64 w-64 md:h-96 md:w-96">
           <Image className="w-full h-full block  " src={`/${index+1}.jpg`} alt="" layout="fill" />
           </div>
         </SwiperSlide>
       ))}
-      <ArrowNarrowRightIcon id="right-nav" className="text-white absolute -right-20 z-10 hover:scale-110 hover:translate-x-2 top-[48%] duration-200 h-8 w-8 cursor-pointer " />
-      <ArrowNarrowLeftIcon id="left-nav" className="absolute text-white my-auto -left-20 top-[48%] hover:scale-110 hover:-translate-x-2 duration-200 z-10 h-8 w-8 cursor-pointer " />
+
  
     </Swiper>
+      </div>
   )
 };
 

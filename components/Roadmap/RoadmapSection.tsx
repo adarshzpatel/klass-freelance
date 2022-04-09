@@ -19,7 +19,7 @@ const RoadmapSection = () => {
         />
         <TimelineItem
           text="2. Team introduction & Community Growth."
-          completed={false}
+          completed={true}
           image="/roadmap/phase2.jpg"
         />
         <TimelineItem
@@ -43,7 +43,7 @@ const RoadmapSection = () => {
 
             <Disclosure.Panel>
             <TimelineItem
-              text="4. Klass NFT Genesis collection presale. 200 KLass NFT launced & minted."
+              text="4. Klass NFT Genesis collection presale. 200 KLass NFT Launched & minted."
               completed={false}
               image="/roadmap/phase4.jpg"
             />
