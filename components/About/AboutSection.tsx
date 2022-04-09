@@ -30,7 +30,7 @@ const AboutSection = () => {
               Sports people, Engineers, musicians, Teachers and many more just
               pick the art that best represents you or pick the one that
               represents the place or career you want to take up. You can also
-              pick because it's cute and you like it.This is actually what art
+              pick because it &apos s cute and you like it.This is actually what art
               was meant to serve as.{" "}
             </p>
             <br />
