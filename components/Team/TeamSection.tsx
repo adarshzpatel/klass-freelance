@@ -24,7 +24,7 @@ const TeamSection = () => {
       <ProfileCard name="Remi" pfp="/team/Remi.jpg" role="Artist" />
       <ProfileCard name="Chinu" pfp="/team/project.jpg" role="Project Manager" />
       <ProfileCard name="Ranza" pfp="/team/mod.jpg" role="Head Mod" />
-      <ProfileCard name="Vivian" pfp="/team/collab.jpg" role="Collab Manager" />
+      <ProfileCard name="Vivian" pfp="/team/Collab.jpg" role="Collab Manager" />
       </div>
       </Container>
     </section>
