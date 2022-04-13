@@ -14,7 +14,7 @@ const Carousel = (props: Props) => {
     <div>
 
     <Swiper
-      className=" w-64 md:w-96 h-64 md:h-96 select-none text-gray-900  font-bold   relative"
+      className="w-48 h-48 sm:w-64 md:w-96 sm:h-64 md:h-96 select-none text-gray-900  font-bold   relative"
       modules={[Autoplay,EffectFade]}
       autoplay={{
         delay: 1000,
@@ -24,8 +24,8 @@ const Carousel = (props: Props) => {
       grabCursor={true}
       >
       {array.map((item,index) => (
-        <SwiperSlide className="flex  rounded-xl ring-1 ring-stone-800 bg-stone-100 text-slate-700   items-start " key={item}>
-          <div className="relative  ring-1 ring-opacity-75 ring-stone-900 rounded-xl overflow-hidden h-64 w-64 md:h-96 md:w-96">
+        <SwiperSlide className="flex  rounded-xl ring-1 ring-stone-800 bg-stone-100 text-slate-700   items-start " key={index}>
+          <div className="relative  ring-1 ring-opacity-75 ring-stone-900 rounded-xl overflow-hidden w-48 h-48 sm:w-64 sm:h-64  md:h-96 md:w-96">
           <Image className="w-full h-full block  " src={`/${index+1}.jpg`} alt="" layout="fill" />
           </div>
         </SwiperSlide>

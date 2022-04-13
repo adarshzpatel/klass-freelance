@@ -18,13 +18,13 @@ const TeamSection = () => {
 
       <Heading text="Meet the team" />
       <div className="flex gap-4 mt-16 flex-wrap justify-center">
-      <ProfileCard name="Kaycee" pfp="/1.jpg" role="Founder" />
-      <ProfileCard name="Maxi" pfp="/2.jpg" role="Co-founder" />
-      <ProfileCard name="Remi" pfp="/3.jpg" role="Co-Founder / Artist" />
-      <ProfileCard name="Adarsh" pfp="/4.jpg" role="Co-Founder / Engineer" />
-      <ProfileCard name="Chinu" pfp="/5.jpg" role="Project Manager" />
-      <ProfileCard name="Ranza" pfp="/6.jpg" role="Head Mod" />
-      <ProfileCard name="Vivian" pfp="/7.jpg" role="Collab Manager" />
+      <ProfileCard name="Kaycee" pfp="/team/Kaycee.jpg" role="Co-founder / CEO" />
+      <ProfileCard name="Maxi" pfp="/team/maxi.jpg" role="Co-founder / Artist" />
+      <ProfileCard name="Adarsh" pfp="/team/Adarsh.jpg" role="Co-Founder / Engineer" />
+      <ProfileCard name="Remi" pfp="/team/Remi.jpg" role="Artist" />
+      <ProfileCard name="Chinu" pfp="/team/project.jpg" role="Project Manager" />
+      <ProfileCard name="Ranza" pfp="/team/mod.jpg" role="Head Mod" />
+      <ProfileCard name="Vivian" pfp="/team/collab.jpg" role="Collab Manager" />
       </div>
       </Container>
     </section>
