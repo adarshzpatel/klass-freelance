@@ -43,7 +43,6 @@ const AboutSection = () => {
             <div className="relative rounded-xl overflow-hidden h-48 w-48 sm:h-64 sm:w-64 md:h-96 md:w-96 bg-slate-700  ">
               <Image src="/animation.gif" layout="fill" alt="" className="absolute" />
             </div>
-           
           </div>
         </div>
       </Container>
