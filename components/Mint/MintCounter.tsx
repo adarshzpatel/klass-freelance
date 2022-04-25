@@ -1,16 +1,20 @@
 import { MinusIcon, PlusIcon } from "@heroicons/react/outline";
+import toast from "react-hot-toast";
 
 type MintCounterProps = {
   count: number;
-  setCount: any
+  setCount: any;
+  maxLimit: number;
 };
 
-const MintCounter = ({ count, setCount }:MintCounterProps) => {
+const MintCounter = ({ count, setCount,maxLimit }:MintCounterProps) => {
   const increment = () => {
-    if (count + 1 <= 5) setCount((count) => count + 1);
+    if (count + 1 <= maxLimit) setCount((count) => count + 1);
+    else toast.error("You can mint max "+ maxLimit +" nfts per transaction.");
   };
   const decrement = () => {
     if (count - 1 > 0) setCount((count) => count - 1);
+    else toast.error("Mint quantity cannot be 0.");
   };
 
   const styles = {
@@ -21,7 +25,6 @@ const MintCounter = ({ count, setCount }:MintCounterProps) => {
 
   return (
     <div className="p-4 w-full grid place-items-center">
-      <p className="text-xm mb-2  text-slate-300 font-display">Quantity</p>
       <div className={styles.counterContainer}>
         <button className="bg-none hue-rotate-0 p-0 ">
           <MinusIcon onClick={decrement} className={styles.counterBtn} />
