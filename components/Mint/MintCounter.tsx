@@ -19,8 +19,8 @@ const MintCounter = ({ count, setCount,maxLimit }:MintCounterProps) => {
 
   const styles = {
     counterContainer: `flex items-center gap-4 `,
-    counterBtn: `w-8 h-8 bg-slate-700 bg-opacity-75 hover:bg-slate-600 active:scale-95 duration-100 ease-out active:border border-slate-400 rounded p-1 cursor-pointer`,
-    countText: `font-display select-none font-bold text-2xl`,
+    counterBtn: `h-6 w-6 md:w-8 md:h-8 bg-slate-700 bg-opacity-75 hover:bg-slate-600 active:scale-95 duration-100 ease-out active:border border-slate-400 rounded p-1 cursor-pointer`,
+    countText: `font-display select-none font-bold text-xl md:text-3xl`,
   };
 
   return (

@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import toast from "react-hot-toast";
 import ConnectWallet from "../components/Mint/ConnectWallet";
 import FreeMint from "../components/Mint/FreeMint";
+import PublicMint from "../components/Mint/PublicMint";
 
 const provider = new ethers.providers.JsonRpcProvider(
   process.env.NEXT_PUBLIC_ALCHEMY_URL
@@ -39,8 +40,8 @@ const Mint = () => {
               {network}
             </div>
           )}
-      <ConnectWallet setCurrentAccount={setCurrentAccount} setNetwork={setNetwork} currentAccount={currentAccount} />
-          {currentAccount && <FreeMint claimingAddress={currentAccount} />}
+          {/* <ConnectWallet setProvider={} setCurrentAccount={setCurrentAccount} setNetwork={setNetwork} currentAccount={currentAccount} /> */}
+          {currentAccount && <PublicMint claimingAddress={currentAccount} />}
         </div>
       </div>
     </>

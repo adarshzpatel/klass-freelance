@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 type Props = {
   link?: string;
   text: string;
-  Icon: any;
+  Icon?: any;
 };
 const SocialLink = ({ link, text, Icon }: Props) => {
   const handleNoLink = () => {
@@ -16,7 +16,7 @@ const SocialLink = ({ link, text, Icon }: Props) => {
   if (!link) {
     return (
       <div onClick={handleNoLink} className="flex cursor-pointer text-slate-200 duration-200 group hover:scale-110  hover:text-white font-display gap-2 items-center">
-        <Icon className="fill-current  durtion-300" />
+       {Icon && <Icon className="fill-current  durtion-300" />}
         {text}
       </div>
     );
@@ -28,7 +28,7 @@ const SocialLink = ({ link, text, Icon }: Props) => {
       target="_blank"
       rel="noreferrer"
     >
-      <Icon className="fill-current  durtion-300" />
+     {Icon && <Icon className="fill-current  durtion-300" />}
       {text}
     </a>
   );

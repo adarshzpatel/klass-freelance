@@ -1,10 +1,11 @@
 import { StarIcon } from "@heroicons/react/solid";
 import { providers, Signer } from "ethers";
 import Head from "next/head";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Web3Modal from "web3modal";
-import FreeMint from "../components/Mint/FreeMint";
 import WalletConnectProvider from "@walletconnect/web3-provider";
+import FreeMint from "../components/Mint/FreeMint";
+
 type Props = {};
 
 const providerOptions = {
@@ -102,19 +103,18 @@ const Presale = (props: Props) => {
       <Head>
         <title>Klass | Presale Mint</title>
       </Head>
-      <div className="bg-slate-800 p-4 h-screen w-full flex items-center justify-center">
-        <div className="flex flex-col gap-4 items-center justify-center h-full  max-w-4xl ">
+      <div className="bg-slate-800 ] p-4 h-screen w-full flex items-center justify-center">
+        <div className="flex flex-col gap-4 items-center justify-center h-full  max-w-xl ">
           <div className="relative">
             <h1 className="select-none text-4xl md:text-5xl cursor-pointer whitespace-nowrap font-display drop-shadow-lg brightness-110 italic  -top-1 relative   font-bold   bg-clip-text bg-gradient-to-r text-transparent from-violet-600 via-fuchsia-600 to-pink-400 ">
-              Klassic Presale
+              Klassic Test Mint
             </h1>
             <h1 className="select-none text-4xl md:text-5xl whitespace-nowrap absolute top-0  font-display italic blur-2xl  font-bold   bg-clip-text bg-gradient-to-r text-transparent from-violet-500 via-fuchsia-600 to-pink-400 ">
               Klassic Presale
             </h1>
           </div>
-          <p className="font-medium font-display flex items-center gap-4">
-            <StarIcon className="h-5 w-5 text-yellow-500" /> Free mint to
-            whitelisted addresses{" "}
+          <p className="font-medium font-display flex items-center gap-4  text-xs text-center">
+            <StarIcon className="h-5 w-5 text-yellow-500" /> This is a test mint , double check the network is RINKEBY.
             <StarIcon className="h-5 w-5 text-yellow-500" />
           </p>
           {network && (
@@ -127,7 +127,8 @@ const Presale = (props: Props) => {
   </div>}
           {!currentAccount && <button onClick={connectWallet}>Connect Wallet</button>}
           {currentAccount && <FreeMint provider={web3Provider} claimingAddress={currentAccount} />}
-        </div>
+        
+    </div>
       </div>
     </>
   );

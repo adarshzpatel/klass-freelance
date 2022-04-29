@@ -1,5 +1,5 @@
-export const CONTRACT_ADDRESS = "0x3d51045B2471D8814F7B34d69b855f64d59856FE"
-export const ABI =  [
+export const CONTRACT_ADDRESS = "0x949c45049a9cdb33718539638fC867Ea919EB50C"
+export const ABI = [
 	{
 		"inputs": [
 			{
@@ -216,16 +216,10 @@ export const ABI =  [
 		"type": "function"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "bytes32[]",
-				"name": "_merkleProof",
-				"type": "bytes32[]"
-			}
-		],
+		"inputs": [],
 		"name": "freeMint",
 		"outputs": [],
-		"stateMutability": "payable",
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
@@ -242,6 +236,19 @@ export const ABI =  [
 				"internalType": "bool",
 				"name": "",
 				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "freeMintCount",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
@@ -337,19 +344,6 @@ export const ABI =  [
 				"internalType": "uint256",
 				"name": "",
 				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "merkleRoot",
-		"outputs": [
-			{
-				"internalType": "bytes32",
-				"name": "",
-				"type": "bytes32"
 			}
 		],
 		"stateMutability": "view",
@@ -581,19 +575,6 @@ export const ABI =  [
 			}
 		],
 		"name": "setMaxMintAmountPerTx",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "bytes32",
-				"name": "_merkleRoot",
-				"type": "bytes32"
-			}
-		],
-		"name": "setMerkleRoot",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"

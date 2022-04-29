@@ -15,8 +15,6 @@
     "@walletconnect/web3-provider": "^1.7.7",
     "ethers": "^5.5.4",
     "framer-motion": "^6.2.8",
-    "keccak256": "^1.0.6",
-    "merkletreejs": "^0.2.31",
     "next": "12.1.0",
     "react": "17.0.2",
     "react-countdown": "^2.3.2",
