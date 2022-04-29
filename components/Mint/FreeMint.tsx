@@ -104,7 +104,7 @@ const FreeMint = ({ claimingAddress, provider }: Props) => {
         }
       </div>
       <div className="flex justify-between">
-        {txHash && (
+        {/* {txHash && (
           <a
             href={"https://rinkeby.etherscan.io/" + txHash}
             className="underline underline-offset-2 text-sky-500 text-center"
@@ -113,7 +113,7 @@ const FreeMint = ({ claimingAddress, provider }: Props) => {
             {" "}
             View Transaction on etherscan{" "}
           </a>
-        )}
+        )} */}
         <SocialLink
           Icon={OpenSeaIcon}
           link={OPENSEA_LINK}
