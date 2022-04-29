@@ -103,7 +103,7 @@ const Presale = (props: Props) => {
         <title>Klass | Presale Mint</title>
       </Head>
       <div className="bg-slate-800 p-4 h-screen w-full flex items-center justify-center">
-        <div className="flex flex-col gap-4 items-center justify-center h-full  max-w-4xl ">
+        <div className="flex flex-col gap-4 items-center justify-center h-full max-w-6xl ">
           <div className="relative">
             <h1 className="select-none text-4xl md:text-5xl cursor-pointer whitespace-nowrap font-display drop-shadow-lg brightness-110 italic  -top-1 relative   font-bold   bg-clip-text bg-gradient-to-r text-transparent from-violet-600 via-fuchsia-600 to-pink-400 ">
               Klassic Presale
