@@ -1,6 +1,6 @@
 import * as React from "react"
 
-const SvgComponent = (props) => (
+const OpenSeaIcon = (props) => (
   <svg
     width={20}
     height={20}
@@ -16,4 +16,4 @@ const SvgComponent = (props) => (
   </svg>
 )
 
-export default SvgComponent
+export default OpenSeaIcon

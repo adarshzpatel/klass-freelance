@@ -4,10 +4,8 @@ import { providers } from "ethers";
 import Script from "next/script";
 import { Toaster } from "react-hot-toast";
 
-const provider = providers.getDefaultProvider();
 
 function MyApp({ Component, pageProps }: AppProps) {
-  console.log(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS);
   return (
     <>
     <Toaster/>

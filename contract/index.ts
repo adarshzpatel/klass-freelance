@@ -1,10 +1,10 @@
-export const CONTRACT_ADDRESS = "0x8deC836944759fC9f6f63ba4463a7F59909010b3"
+export const CONTRACT_ADDRESS = "0x949c45049a9cdb33718539638fC867Ea919EB50C"
 export const ABI = [
 	{
 		"inputs": [
 			{
 				"internalType": "string",
-				"name": "_uriPrefix",
+				"name": "_hiddenMetadataUri",
 				"type": "string"
 			}
 		],
@@ -216,6 +216,58 @@ export const ABI = [
 		"type": "function"
 	},
 	{
+		"inputs": [],
+		"name": "freeMint",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "freeMintClaimed",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "freeMintCount",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "freeMintEnabled",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
 		"inputs": [
 			{
 				"internalType": "uint256",
@@ -313,14 +365,14 @@ export const ABI = [
 	{
 		"inputs": [
 			{
-				"internalType": "uint256",
-				"name": "_mintAmount",
-				"type": "uint256"
-			},
-			{
 				"internalType": "address",
 				"name": "_receiver",
 				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_mintAmount",
+				"type": "uint256"
 			}
 		],
 		"name": "mintForAddress",
@@ -484,6 +536,19 @@ export const ABI = [
 			}
 		],
 		"name": "setCost",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bool",
+				"name": "_state",
+				"type": "bool"
+			}
+		],
+		"name": "setFreeMintEnabled",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -706,19 +771,6 @@ export const ABI = [
 				"internalType": "uint256[]",
 				"name": "",
 				"type": "uint256[]"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "whitelistMintEnabled",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
 			}
 		],
 		"stateMutability": "view",
