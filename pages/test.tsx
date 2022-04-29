@@ -47,16 +47,24 @@ const Presale = (props: Props) => {
   const [provider, setProvider] = useState<any>();
   const [web3Provider,setWeb3Provider] = useState<providers.Web3Provider>();
 
+
+
+  
+
   const connectWallet = async () => {
     try {
       const instance = await web3Modal.connect();
       setProvider(instance);
       const provider = new providers.Web3Provider(instance);
       setWeb3Provider(provider);
+      
       const signer = await provider.getSigner();
       setCurrentAccount(await signer.getAddress());
       const chainId = await (await provider.getNetwork()).chainId;
       console.log(chainId);
+      if(chainId == 1){
+        alert("You are on Main net , switch to rinkeby to avoid any losses")
+      }
       setNetwork(networks["0x" + chainId]);
 
     } catch (err) {
