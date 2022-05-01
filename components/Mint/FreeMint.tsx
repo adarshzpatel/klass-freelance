@@ -46,7 +46,7 @@ const FreeMint = ({ claimingAddress, provider }: Props) => {
 
   useEffect(() => {
     if (claimingAddress) {
-      checkIfUserHasAlreadyMinted();
+      // checkIfUserHasAlreadyMinted();
     }
   }, [claimingAddress]);
 
@@ -103,28 +103,7 @@ const FreeMint = ({ claimingAddress, provider }: Props) => {
           </button>
         }
       </div>
-      <div className="flex justify-between">
-        {/* {txHash && (
-          <a
-            href={"https://rinkeby.etherscan.io/" + txHash}
-            className="underline underline-offset-2 text-sky-500 text-center"
-            rel="noreferrer"
-          >
-            {" "}
-            View Transaction on etherscan{" "}
-          </a>
-        )} */}
-        <SocialLink
-          Icon={OpenSeaIcon}
-          link={OPENSEA_LINK}
-          text=" View on OpenSea"
-        />
-
-        <SocialLink
-          link="https://rinkeby.etherscan.io/address/0x949c45049a9cdb33718539638fC867Ea919EB50C"
-          text="View on Etherscan"
-        />
-      </div>
+     
     </div>
   );
 };

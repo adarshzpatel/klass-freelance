@@ -33,8 +33,8 @@ const HeroTitle = (props: Props) => {
       </h1>
     </div>
     <div className='mt-12 flex justify-center md:justify-start'>
-    <CtaBtn link='https://discord.com/invite/v5CWUfjxHk'>
-       <p className='z-[1]'>  Join Discord </p>
+    <CtaBtn link='/presale'>
+       <p className='z-[1]'>  Mint Klass NFT </p>
         <ChevronDoubleRightIcon  className='h-4 w-4 md:h-8 md:w-8 relative '/>
     </CtaBtn>
     </div>

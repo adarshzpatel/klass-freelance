@@ -10,11 +10,10 @@ const renderer = ({days,hours,minutes,seconds,completed}) => {
     return "Presale Started"
   } else {
     return <div className='text-xl sm:text-3xl md:text-4xl lg:text-6xl flex md:gap-4 font-bold font-display '>
-     
     <p className='flex flex-col items-center justify-center gap-2'> {zeroPad(days)}<span className='text-gray-300 font-normal  text-base sm:text-lg md:text-2xl'> days </span> </p> :
     <p className='flex flex-col items-center justify-center gap-2'>  {zeroPad(hours)}<span className='text-gray-300 font-normal text-base  sm:text-lg md:text-2xl'> hours</span> </p> : 
-     <p className='flex flex-col items-center justify-center gap-2'> {zeroPad(minutes)}<span className='text-gray-300 font-normal text-base sm:text-lg md:text-2xl'> minutes </span></p> :
-     <p className='flex flex-col items-center justify-center gap-2'> {zeroPad(seconds) }<span className='text-gray-300 font-normal text-base sm:text-lg md:text-2xl'> seconds </span> </p>
+    <p className='flex flex-col items-center justify-center gap-2'> {zeroPad(minutes)}<span className='text-gray-300 font-normal text-base sm:text-lg md:text-2xl'> minutes </span></p> :
+    <p className='flex flex-col items-center justify-center gap-2'> {zeroPad(seconds) }<span className='text-gray-300 font-normal text-base sm:text-lg md:text-2xl'> seconds </span> </p>
     </div>
   }
 }

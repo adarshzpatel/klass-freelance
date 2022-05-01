@@ -14,7 +14,7 @@ const Carousel = (props: Props) => {
     <div>
 
     <Swiper
-      className="w-48 h-48 sm:w-64 md:w-96 sm:h-64 md:h-96 select-none text-gray-900  font-bold   relative"
+      className="w-48 h-48 sm:w-64 md:w-96 sm:h-64 md:h-96 select-none    relative"
       modules={[Autoplay,EffectFade]}
       autoplay={{
         delay: 1000,
