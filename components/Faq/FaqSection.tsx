@@ -19,7 +19,7 @@ const FaqSection = (props: Props) => {
           />
         <FaqItem
           q="How much does Klass NFT cost ?"
-          a="The presale is a FREE mint for whitelisted addresses . You can mint Klass NFT for 0.01 eth during public sales."
+          a="The presale is a FREE mint for whitelisted addresses . You can mint Klass NFT for 0.008 eth during public sales."
           />
         <FaqItem
           q="How many can I mint during pre sale ?"
@@ -27,7 +27,7 @@ const FaqSection = (props: Props) => {
           />
           <FaqItem 
           q="How many can I mint during public sales ?"
-          a="5 per transaction . ERC721A contract optimized for multiple mints ( mint multiple nfts while only paying gas fees for one nft in a transaction)."
+          a="15 per transaction . ERC721A contract optimized for multiple mints ( mint multiple nfts while only paying gas fees for one nft in a transaction)."
            />
         <FaqItem q=" When is the presale ?" a=" May 4th , 2022" />
         <FaqItem q=" When is the public sale ?" a=" May 5th , 2022" />
