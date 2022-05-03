@@ -103,12 +103,13 @@ const Presale = (props: Props) => {
         <title>Klass | Presale Mint</title>
       </Head>
       <div className="bg-slate-800 p-4 min-h-screen w-full flex items-center justify-center">
+      <div className="h-96 w-96 bg-gradient-to-r rounded-full blur-3xl opacity-25  from-orange-400 via-fuchsia-500 to-violet-500 fixed"></div>
         <div className="flex flex-col gap-4 items-center justify-center h-full max-w-screen-lg ">
           <div className="relative mb-4">
-            <h1 className="select-none text-4xl md:text-5xl cursor-pointer whitespace-nowrap font-display drop-shadow-lg brightness-110 italic  -top-1 relative   font-bold   bg-clip-text bg-gradient-to-r text-transparent from-violet-600 via-fuchsia-600 to-pink-400 ">
+            <h1 className="select-none text-2xl sm:text-4xl  md:text-5xl cursor-pointer text-center  font-display drop-shadow-lg brightness-110 italic  -top-1 relative   font-bold   bg-clip-text bg-gradient-to-r text-transparent from-violet-600 via-fuchsia-600 to-pink-400 ">
               Klass Presale Mint
             </h1>
-            <h1 className="select-none text-4xl md:text-5xl whitespace-nowrap absolute top-0  font-display italic blur-2xl  font-bold   bg-clip-text bg-gradient-to-r text-transparent from-violet-500 via-fuchsia-600 to-pink-400 ">
+            <h1 className="select-none text-2xl sm:text-4xl md:text-5xl text-center  absolute top-0  font-display italic blur-2xl  font-bold   bg-clip-text bg-gradient-to-r text-transparent from-violet-500 via-fuchsia-600 to-pink-400 ">
               Klass Presale Mint
             </h1>
             <p className="font-medium justify-center mt-4 font-display flex items-center gap-4">
@@ -128,7 +129,7 @@ const Presale = (props: Props) => {
               )}
               {currentAccount && (
                 <div className="text-sm w-full md:text-base text-center font-display font-medium bg-gradient-to-r from-purple-500 bg-opacity-70 to-pink-400  px-4 rounded-lg py-1">
-                  {currentAccount}
+                  {currentAccount.slice(0,10) + "..." + currentAccount.slice(-10,-1)}
                 </div>
               )}
               {!currentAccount && (

@@ -40,7 +40,7 @@ const FreeMint = ({ claimingAddress, provider }: Props) => {
       toast("NFT Minted successfully.");
     } catch (err) {
       console.error({ err });
-      toast.error(err.error.message);
+      toast.error(err?.error?.message);
     }
   };
 
@@ -71,27 +71,27 @@ const FreeMint = ({ claimingAddress, provider }: Props) => {
   }
 
   return (
-    <div className="flex flex-col gap-4 w-full ">
-      <div className="bg-slate-900 rounded-xl grid grid-cols-2 divide-x divide-gray-600 py-6 px-3 md:px-6">
-        <div className=" flex flex-col font-display items-center justify-center">
-          <p className="text-sm md:text-base text-gray-400">Total Supply</p>
-          <p className="text-xl md:text-3xl font-bold whitespace-nowrap">
+    <div className="flex flex-col gap-4 w-full z-10 ">
+      <div className="bg-slate-900 rounded-xl grid grid-cols-2 divide-x divide-gray-600 md:py-6 py-3 px-3 md:px-6 w-full">
+        <div className=" flex flex-col font-display items-center justify-center md:px-4">
+          <p className="text-xs sm:text-sm md:text-base text-gray-400">Total Supply</p>
+          <p className="text-lg sm:text-xl md:text-3xl font-bold whitespace-nowrap">
             5555
           </p>
         </div>
-        <div className="flex flex-col font-display items-center justify-center">
-          <p className="text-sm md:text-base text-gray-400">Sale Status</p>
-          <p className="text-xl md:text-3xl font-bold">Presale</p>
+        <div className="flex flex-col font-display items-center justify-center md:px-4">
+          <p className="text-xs sm:text-sm md:text-base text-gray-400">Sale Status</p>
+          <p className="text-lg sm:text-xl md:text-3xl font-bold">Presale</p>
         </div>
       </div>
-      <div className="bg-slate-900 grid grid-cols-2  rounded-xl divide-x divide-gray-600 py-6 px-3 md:px-6">
-        <div className=" flex flex-col font-display items-center justify-center">
-          <p className="text-sm md:text-base text-gray-400">Mint Quantity</p>
-          <p className="text-xl md:text-3xl font-bold whitespace-nowrap">1</p>
+      <div className="bg-slate-900 grid grid-cols-2  rounded-xl divide-x divide-gray-600 md:py-6 py-3 px-3 md:px-6">
+        <div className=" flex flex-col font-display items-center justify-center md:px-4">
+          <p className="text-xs sm:text-sm md:text-base text-gray-400">Mint Quantity</p>
+          <p className="text-lg sm:text-xl md:text-3xl font-bold whitespace-nowrap">1</p>
         </div>
-        <div className="w- flex flex-col font-display items-center justify-center">
-          <p className="text-sm md:text-base text-gray-400">Mint Cost</p>
-          <p className="text-xl md:text-3xl font-bold">FREE</p>
+        <div className="w- flex flex-col font-display items-center justify-center md:px-4">
+          <p className="text-xs sm:text-sm md:text-base text-gray-400">Mint Cost</p>
+          <p className="text-lg sm:text-xl md:text-3xl font-bold">FREE</p>
         </div>
         {
           <button
