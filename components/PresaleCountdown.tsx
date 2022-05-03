@@ -29,7 +29,7 @@ const PresaleCountdown = (props: Props) => {
       <div className='relative flex flex-col items-center md:items-start'>
         <h6 className='text-lg sm:text-2xl md:text-3xl font-display z-[1] brightness-125 bg-gradient-to-r  from-orange-500 max-w-fit bg-clip-text text-transparent to to-pink-600 leading-loose'>Presale begins in</h6>
         <h6 className='text-lg sm:text-2xl md:text-3xl absolute top-0 blur-lg font-display bg-gradient-to-r from-orange-500 max-w-fit bg-clip-text text-transparent to to-pink-600 leading-loose'>Presale begins in</h6>
-      <Countdown date={new Date("2022-05-04T11:00")} renderer={renderer} />
+      <Countdown date={new Date("2022-05-04T06:00")} renderer={renderer} />
       </div>
       </div>
       </Container>
