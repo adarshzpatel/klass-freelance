@@ -41,6 +41,7 @@ const PublicMint = ({claimingAddress,provider}: Props) => {
       const signer = provider.getSigner();
       const klassContract = new Contract(CONTRACT_ADDRESS,ABI,signer);
       const mintTx = await klassContract.mint(mintQuantity,{value:ethers.utils.parseEther((mintQuantity * mintCost).toFixed(4))});
+      await mintTx.wait();
       setLoading(true);
       setTxHash(mintTx.hash);
       await mintTx.wait();
@@ -85,7 +86,7 @@ const PublicMint = ({claimingAddress,provider}: Props) => {
           </button>
         }
       </div>
-    { txHash &&  <a className="text-center font-display text-sm underline underline-offset-4" href={`http://www.etherscan.io/tx/${txHash}`}>View Transaction Reciept</a>}
+    { txHash &&  <a className="text-center font-display text-sm underline underline-offset-4" href={`https://opensea.io/collection/klass-nft`}>View on Opensea</a>}
     </div>
   )
 }
