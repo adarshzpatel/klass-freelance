@@ -18,30 +18,12 @@ const PublicMint = ({claimingAddress,provider}: Props) => {
   const [mintQuantity,setMintQuantity] = useState<number>(1);
   const [mintCost,setMintCost] = useState<number>(0.008);
   const [totalSupply,setTotalSupply] = useState<number>(0);
-  
-  const getTotalSupply = async () => {
-    try{
-      const provider = new ethers.providers.JsonRpcProvider(process.env.NEXT_PUBLIC_ALCHEMY_URL);
-      const klassContract = new Contract(CONTRACT_ADDRESS,ABI,provider);
-      const _totalSupply = await klassContract.totalSupply();
-      console.log(_totalSupply)
-      setTotalSupply(_totalSupply.toString());
-    }catch(err){
-      console.log(err);
-      toast.error(err.message);
-    }
-  }
-
-  useEffect(()=>{
-    getTotalSupply();
-  },[]);
 
   const mint = async () => {
     try{
       const signer = provider.getSigner();
       const klassContract = new Contract(CONTRACT_ADDRESS,ABI,signer);
       const mintTx = await klassContract.mint(mintQuantity,{value:ethers.utils.parseEther((mintQuantity * mintCost).toFixed(4))});
-      
       setLoading(true);
       setTxHash(mintTx.hash);
       await mintTx.wait();
@@ -50,8 +32,7 @@ const PublicMint = ({claimingAddress,provider}: Props) => {
       toast("NFT Minted successfully.");
     }catch(err){
       console.log(err);
-      toast.error(err.message);
-    }
+      toast.error(err?.error?.message);}
   } 
     return (
       <div className="flex flex-col gap-3 w-full z-10 ">
