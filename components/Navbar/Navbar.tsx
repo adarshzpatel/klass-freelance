@@ -12,17 +12,13 @@ import {
   OPENSEA_LINK,
   TWITTER_LINK,
 } from "../../constants/social";
-import { toast } from "react-hot-toast";
+
 const Navbar = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState<boolean>(false);
   return (
     <>
       <header
-        className="p-4 backdrop-brightness-75  backdrop-blur-xl lg:px-8 lg:py-4 w-screen z-50 border-b  border-gray-800 fixed bg-slate-
-type Props = {
-  children: React.ReactNode;
-};900 bg-opacity-50"
-      >
+        className="p-4 backdrop-brightness-75  backdrop-blur-xl lg:px-8 lg:py-4 w-screen z-50 border-b  border-gray-800 fixed bg-slate-900 bg-opacity-50">
         <nav className="flex  relative w-full  top-0 items-center max-w-screen-xl mx-auto container  justify-between">
           <div className="gap-5 hidden text-slate-300 lg:flex">
             <NavItem text="Roadmap" link="#roadmap" />\
@@ -34,7 +30,7 @@ type Props = {
           <div className="hidden md:flex gap-4 text-slate-300">
             <SocialLink Icon={DiscordIcon} link={DISCORD_LINK} text="Discord" />
             /
-            <SocialLink Icon={OpenSeaIcon} text="OpenSea" />
+            <SocialLink Icon={OpenSeaIcon} text="OpenSea" link={OPENSEA_LINK} />
             /
             <SocialLink Icon={TwitterIcon} link={TWITTER_LINK} text="Twitter" />
           </div>

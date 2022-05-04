@@ -103,7 +103,7 @@ const FreeMint = ({ claimingAddress, provider }: Props) => {
           </button>
         }
       </div>
-     
+    { txHash &&  <a className="text-center font-display text-sm underline underline-offset-4" href={`http://www.etherscan.io/tx/`}>View Transaction Reciept</a>}
     </div>
   );
 };
