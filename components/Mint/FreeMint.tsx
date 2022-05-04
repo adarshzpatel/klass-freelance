@@ -18,9 +18,6 @@ const FreeMint = ({ claimingAddress, provider }: Props) => {
   const [hasClaimed, setHasClaimed] = useState<boolean>(false);
 
   const checkIfUserHasAlreadyMinted = async () => {
-    const provider = new ethers.providers.JsonRpcProvider(
-      process.env.NEXT_PUBLIC_ALCHEMY_URL
-    );
     const klassContract = new Contract(CONTRACT_ADDRESS, ABI, provider);
     const _hasClaimed = await klassContract.freeMintClaimed(claimingAddress);
     console.log(_hasClaimed);
@@ -46,7 +43,7 @@ const FreeMint = ({ claimingAddress, provider }: Props) => {
 
   useEffect(() => {
     if (claimingAddress) {
-      // checkIfUserHasAlreadyMinted();
+      checkIfUserHasAlreadyMinted();
     }
   }, [claimingAddress]);
 
@@ -59,11 +56,6 @@ const FreeMint = ({ claimingAddress, provider }: Props) => {
             Icon={OpenSeaIcon}
             link={OPENSEA_LINK}
             text=" View on OpenSea"
-          />
-
-          <SocialLink
-            link="https://rinkeby.etherscan.io/address/0x949c45049a9cdb33718539638fC867Ea919EB50C"
-            text="View on Etherscan"
           />
         </div>
       </div>
@@ -103,7 +95,7 @@ const FreeMint = ({ claimingAddress, provider }: Props) => {
           </button>
         }
       </div>
-    { txHash &&  <a className="text-center font-display text-sm underline underline-offset-4" href={`http://www.etherscan.io/tx/`}>View Transaction Reciept</a>}
+    { txHash &&  <a className="text-center font-display text-sm underline underline-offset-4" href={`https://opensea.io/collection/klass-nft`}>View on OpenSea</a>}
     </div>
   );
 };
