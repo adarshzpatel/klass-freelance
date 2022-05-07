@@ -40,7 +40,7 @@ const PublicMint = ({claimingAddress,provider}: Props) => {
         <div className=" flex flex-col font-display items-center justify-center md:px-4">
           <p className="text-xs sm:text-sm md:text-base text-gray-400">Total Supply</p>
           <p className="text-lg sm:text-xl md:text-3xl font-bold whitespace-nowrap">
-            5555
+            3333
           </p>
         </div>
         <div className="flex flex-col font-display items-center justify-center md:px-4">
