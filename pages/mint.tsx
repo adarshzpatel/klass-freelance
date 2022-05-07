@@ -1,4 +1,4 @@
-import { StarIcon } from "@heroicons/react/outline";
+import { StarIcon } from "@heroicons/react/solid";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
 import Carousel from "../components/Hero/Carousel";
@@ -111,7 +111,9 @@ const Mint = () => {
             <h1 className="select-none text-2xl sm:text-4xl md:text-5xl text-center  absolute top-0  font-display italic blur-2xl  font-bold   bg-clip-text bg-gradient-to-r text-transparent from-violet-500 via-fuchsia-600 to-pink-400 ">
               Klass Mint
             </h1>
-            
+            <div className="flex items-center gap-2">
+              <StarIcon className="h-6 w-6 text-yellow-500"/>Mint upto 15 nfts by for gas price of 1 (ERC-721A)<StarIcon className="h-6 w-6 text-yellow-500"/>
+            </div>
           </div>
           <div className="flex gap-8 flex-col lg:flex-row items-center  justify-center">
             <Carousel />

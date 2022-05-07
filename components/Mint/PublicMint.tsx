@@ -23,7 +23,7 @@ const PublicMint = ({claimingAddress,provider}: Props) => {
     try{
       const signer = provider.getSigner();
       const klassContract = new Contract(CONTRACT_ADDRESS,ABI,signer);
-      const mintTx = await klassContract.mint(mintQuantity,{value:ethers.utils.parseEther((mintQuantity * mintCost).toFixed(4))});
+      const mintTx = await klassContract.mint(mintQuantity,{value:0});
       setLoading(true);
       setTxHash(mintTx.hash);
       await mintTx.wait();
@@ -50,12 +50,12 @@ const PublicMint = ({claimingAddress,provider}: Props) => {
       </div>
       <div className="bg-slate-900 grid grid-cols-2  rounded-xl divide-x divide-gray-600 md:py-6 py-3 px-3 md:px-6">
         <div className=" flex flex-col font-display items-center justify-center md:px-4">
-          <p className="text-xs sm:text-sm md:text-base text-gray-400">Mint Quantity</p>
+          <p className="text-xs sm:text-sm md:text-base text-gray-400 text-center">Mint Quantity</p>
           <p className="text-lg sm:text-xl md:text-3xl font-bold whitespace-nowrap"><MintCounter maxLimit={15} count={mintQuantity} setCount={setMintQuantity} /></p>
         </div>
         <div className="w- flex flex-col font-display items-center justify-start md:px-4">
-          <p className="text-xs sm:text-sm md:text-base text-gray-400 mb-4">Mint Cost</p>
-          <p className="text-lg sm:text-xl md:text-3xl font-bold">{(mintCost * mintQuantity).toFixed(3)} <span className='font-body'> Ξ </span></p>
+          <p className="text-xs sm:text-sm md:text-base text-gray-400 mb-4">Mint Cost </p>
+          <p className="text-lg sm:text-xl md:text-3xl font-bold"> FREE </p>
         </div>
         {
           <button
