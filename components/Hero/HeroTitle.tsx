@@ -1,6 +1,7 @@
 import { ChevronDoubleRightIcon } from '@heroicons/react/outline'
 import React from 'react'
 import Typewriter from "typewriter-effect"
+import { OPENSEA_LINK } from '../../constants/social'
 import CtaBtn from './CtaBtn'
 type Props = {}
 
@@ -33,8 +34,8 @@ const HeroTitle = (props: Props) => {
       </h1>
     </div>
     <div className='mt-12 flex justify-center md:justify-start'>
-    <CtaBtn link='/mint'>
-       <p className='z-[1]'> Go to mint page </p>
+    <CtaBtn link={OPENSEA_LINK}>
+       <p className='z-[1]'> View on Opensea </p>
         <ChevronDoubleRightIcon  className='h-4 w-4 md:h-8 md:w-8 relative '/>
     </CtaBtn>
     </div>
