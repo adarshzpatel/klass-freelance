@@ -55,7 +55,7 @@ const Allfocked: NextPage = (props: Props) => {
           <ImageGallery />
           <div className="flex-1 flex flex-col justify-center">
             <h2 className="text-4xl mb-8 leading-tight font-sora font-bold text-gray-300">
-              Here's your chance to join the <br />
+              Here is your chance to join the <br />
               <GoldenText> NFT community </GoldenText>,
               <GreenText>
                 pay absolutely nothing to mint except gas fees
