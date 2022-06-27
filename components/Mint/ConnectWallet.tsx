@@ -7,17 +7,17 @@ type Props = {
   currentAccount:any
 };
 
-const networks = {
-  "0x1": "Ethereum Mainnet",
-  "0x3": "Ropsten",
-  "0x2a": "Kovan",
-  "0x4": "Rinkeby Testnet",
-  "0x5": "Goerli",
-  "0x61": "BSC Testnet",
-  "0x38": "BSC Mainnet",
-  "0x89": "Polygon Mainnet",
-  "0x13881": "Polygon Testnet",
-  "0xa86a": "AVAX Mainnet",
+export const networks = {
+  "1": "Ethereum Mainnet",
+  "3": "Ropsten",
+  "2a": "Kovan",
+  "4": "Rinkeby Testnet",
+  "5": "Goerli",
+  "61": "BSC Testnet",
+  "38": "BSC Mainnet",
+  "89": "Polygon Mainnet",
+  "13881": "Polygon Testnet",
+  "a86a": "AVAX Mainnet",
 };
 
 const ConnectWallet = ({currentAccount,setCurrentAccount,setNetwork}: Props) => {

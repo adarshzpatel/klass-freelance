@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     fontFamily:{
         body:['IBM Plex Sans','sans-serif'],
-        display:'Space Mono',
-        itim:'Itim'
+        display:'Space Grotesk',
+        sora:'Sora'
     },
     extend: {},
   },
